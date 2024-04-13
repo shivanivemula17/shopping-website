@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	
+	<title>INDUS SALE</title>
+    <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" href="../css/admin-css.css">
+    <link rel="stylesheet" href="../css/user-css.css">
+    <link rel="icon" href="../images/logo.jpg" type="image/icon type">
+	<script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			$(".hamburger").click(function(){
+			   $(".wrapper").toggleClass("collapse");
+			});
+		});
+	</script>
+</head>
+<style>
+    .tit{
+        color: #fff;
+        padding-left: 500px;
+        font-size: 40px;
+    }
+    td{
+        border-style: groove;
+        border-color: #fff;
+        color: #fff;
+        padding: 20px;
+        padding-left: 80px;
+        padding-right: 80px;
+    }
+    .tab{
+        margin-left: 350px;
+        margin-top: 50px;
+    }
+</style>
+<body>
+
+    <div class="wrapper">
+        <div class="top_navbar">
+            <div class="hamburger">
+                <div class="one"></div>
+                <div class="two"></div>
+                <div class="three"></div>
+            </div>
+        <div class="top_menu">
+            <div class="logo"><img src="../images/logo.jpg" class="navlogo"><a href="#" class="nav_head">Indus Sale</a></div>
+                <ul>
+                    <li><a href="feedback.html">
+                        <i class="fas fa-comment" alt="feedback"></i></a></li>
+                    <li><a href="admin_profile.html">
+                        <i class="fas fa-user" alt="profile"></i></a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div>
+            <div class="sidebar">
+                <ul>
+                <li><a href="../home.html" >
+                    <span class="icon"><i class="fas fa-home"></i></span>
+                    <span class="title">Home</span></a></li>
+
+                <li><a href="admin.html" >
+                    <span class="icon"><i class="fas fa-user"></i></span>
+                    <span class="title">admin</span></a></li>
+        
+                <li><a href="add_manager.html" >
+                    <span class="icon"><i class="fas fa-user-plus"></i></span>
+                    <span class="title">Add Manager</span></a></li>
+
+                <li><a href="item_list.html" >
+                    <span class="icon"><i class="fas fa-book"></i></span>
+                    <span class="title">Item List</span></a></li>
+
+                <li><a href="customer_list.html">
+                    <span class="icon"><i class="fas fa-address-book"></i></span>
+                    <span class="title">Customer List</span></a></li>
+
+                <li><a href="manager_list.html">
+                    <span class="icon"><i class="fas fa-address-book"></i></span>
+                    <span class="title">Manager List</span></a></li>
+                </ul>
+            </div>
+
+            
+             <!-- heading of the page -->
+             <section id="home_heading">
+                <h1>Feedback page</h1>
+                <p>This is the <br>feedback page of the Admin</p>
+            </section>
+            
+        </div>
+    </div>
+            <!--main page -->
+            <div class="tit"> FEEDBACK</div>
+            <table class="tab">
+                <thead>
+                    <td>s.no</td>
+                    <td>Name</td>
+                    <td>description</td>
+                </thead>
+                <tbody>
+                    <tr>
+                    <td>1</td>
+                    <td>shiavni</td>
+                    <td>nice product</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>vani</td>
+                    <td>good service</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>bhavani</td>
+                    <td>improve the quality</td>
+                </tr>
+                </tbody>
+            </table>
+
+            <script>
+                const btns = document.querySelector("button");
+                const post = document.querySelector(".post");
+                const widget = document.querySelector(".star-widget");
+                const editbtns = document.querySelector(".edit");
+                btns.onclick = ()=>{
+                    widget.style.display = "none";
+                    post.style.display = "block";
+                    editbtns.onclick = ()=>{
+                        widget.style.display = "block";
+                        post.style.display = "none";
+                    }
+                    return false;
+                }
+            </script>
+
+
+            
+        
+    
+
+</body>
+<!-- footer -->
+<footer class="home_footer">
+    <div class="footer_container">
+        <div class="footer_row">
+            <div class="footer_col">
+                <h4>Company</h4>
+                <ul class="footer_ul">
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Our Services</a></li>
+                    <li><a href="#">PrivacyPolicy</a></li>
+                    <li><a href="#">Affiliate Program</a></li>
+                </ul>
+            </div>
+            <div class="footer_col">
+                <h4>Get Help</h4>
+                <ul class="footer_ul">
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Shipping</a></li>
+                    <li><a href="#">Returns</a></li>
+                    <li><a href="#">Order Status</a></li>
+                    <li><a href="#">Payment Options</a></li>
+                </ul>
+            </div>
+            <div class="footer_col">
+                <h4>Online Shop</h4>
+                <ul class="footer_ul">
+                    <li><a href="#">Watch</a></li>
+                    <li><a href="#">Bag</a></li>
+                    <li><a href="#">Shoes</a></li>
+                    <li><a href="#">Dress</a></li>
+                </ul>
+            </div>
+            <div class="footer_col">
+                <h4>Follow Us</h4>
+                <div class="footer_links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</footer>
+</html>

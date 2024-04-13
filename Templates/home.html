@@ -1,0 +1,267 @@
+{% load static %}   
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>INDUS SALE</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <link rel="icon" href="{% static 'IMAGES/logo.jpg' %}" type="image/icon type">
+        <meta name="viewport" content="widhth=device-width,initial-scale=1.0">
+        <link rel="stylesheet" href="{% static 'css/common_nav_footer_css.css' %}">
+        <link rel="stylesheet" href="{% static 'css/common_css.css' %}">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@10..48,600&family=Cookie&family=Handlee&family=Lobster+Two&family=Marck+Script&family=Oswald:wght@300&family=Playfair+Display&family=Tangerine&display=swap" 
+         rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+         integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    </head>
+    <style>
+        .home_body{
+            background-image: url(../static/images/home_bg.jpg);
+        }
+       /* home page modules*/
+    .container_module{
+        display: flex;
+        position: relative;
+        width:100%
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        padding: 30px;
+    }
+    .mcard{
+        position:relative;
+        max-width: 330px;
+        height: 300px;
+        background-color:#fff;
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        border: solid rgba(232, 226, 226, 0.18);
+        margin: 30px 10px;
+        padding: 10px 15px;
+        display: flex;
+        flex-direction: column;
+        box-shadow: 0 3px 50px rgba(0,0,0,0.5);
+        transition: 0.4s ease-in-out;
+    }
+    .mcard:hover{
+        height: 550px;
+    }
+    .cimg {
+        position: relative;
+        width: 260px;
+        height: 200px;
+        top: -60px;
+        left: 20px;
+        z-index: 1;
+        box-shadow: 0 3px 50px rgba(0,0,0,0.5);
+    }
+    .cimg img{
+        max-width: 100%;
+        width: 400px;
+        height: 250px;
+        border-radius: 6px;
+    
+    }
+    a{
+        text-decoration: none;
+    }
+    .cdetail{
+        text-decoration: solid;
+        position: relative;
+        margin-top: 400px;
+        padding: 10px 15px;
+        text-align: center;
+        color: #000;
+        font-family: monospace;
+        visibility: hidden;
+        opacity: 0;
+        transition: 0.4s ease-in-out;
+    }
+    .mcard:hover .cdetail{
+        visibility: visible;
+        opacity: 1;
+        margin-top: 10px;
+    }
+
+
+    </style>
+    <body class="home_body">
+        <script src="js/script.js"></script>
+        <!-- Nav bar-->
+       <header class="nav_heading">
+            <div class="navbar">
+                <div class="logo"><img src="{% static 'images/logo.jpg' %}" class="navlogo"><a href="#" class="nav_head">Indus Sale</a></div>
+                <ul class="nav_links">
+                    <li class="nav_link"><a href="home" class="nav_link">Home</a></li>
+                    <li class="nav_link"><a href="about" class="nav_link">About</a></li>
+                    <li class="nav_link"><a href="contact" class="nav_link">Contact</a></li>
+                    <li class="nav_link"><a href="module_admin" class="nav_link">Admin</a></li>
+                    <li class="nav_link"><a href="module_manager" class="nav_link">Manager</a></li>
+                    <li class="nav_link"><a href="module_user" class="nav_link">User</a></li>
+                </ul>
+                <a href="login" class="home_signin">login</a>
+                <div class="toggle_btn">
+                    <span class="material-symbols-outlined">menu</span>
+                </div>
+            </div>
+            <div class="dropdown_menu ">
+                <li class="nav_link"><a href="home" class="nav_link">Home</a></li>
+                <li class="nav_link"><a href="about" class="nav_link">About</a></li>
+                <li class="nav_link"><a href="contact" class="nav_link">Contact</a></li>
+                <li class="nav_link"><a href="module_admin" class="nav_link">Admin</a></li>
+                <li class="nav_link"><a href="module_manager" class="nav_link">Manager</a></li>
+                <li class="nav_link"><a href="module_user" class="nav_link">User</a></li>
+                <li><a href="login" class="home_signin nav_link">login</a></li>
+            </div>
+        </header>
+        <main>
+            <!-- heading of the page -->
+            <section id="home_heading">
+                <h1>Home page</h1>
+                <p>This is the <br>Home page of the website</p>
+            </section>
+            <!--modules-->
+        <div class="container_module">
+
+            <a href="admin">
+            <div class="mcard">
+                <div class="cimg">
+                    <img src="{% static 'images/admin_module.jpg' %}">
+                </div>
+                <div class="cdetail">
+                    <h2>ADMIN</h2>
+                    <p>
+                        In this portal admin is a person who sells all the products. 
+                        The admin maintains the website and uploads the details or list of the products which he sells.
+                        Admin will have access to all the information related to the products, manager and user. 
+                        Admin will sell the products according to the requirements of the user.
+                        He will also have the list of managers and the users. 
+                        Only admin can add the new manager into the portal. 
+                        Admin can see the feedbacks from the manager and client.                    </p>
+                </div>
+            </div>
+        </a>
+
+            <a href="login">
+            <div class="mcard">
+                <div class="cimg">
+                    <img src="{% static 'images/manager_module.jpg' %}">
+                </div>
+                <div class="cdetail">
+                    <h2>MANAGER</h2>
+                    <p>
+                        In this portal manager is a person who acts as the bridge between the admin and the user.
+                        Manager also has the register and login   credentials to enter into the portal.
+                        Using his login details he enters into the portal .
+                        Manager will have all the information about the list of products and list of customers in the portal. 
+                        Manager also has the access to upload the products into the portal.
+                        If manager have any issues he can also give the feedback to the admin.                    </p>
+                </div>
+            </div>
+        </a>
+
+            <a href="login">
+            <div class="mcard">
+                <div class="cimg">
+                    <img src="{% static 'images/user_module.jpg' %}">
+                </div>
+                <div class="cdetail">
+                    <h2>USER</h2>
+                    <p>
+                        In this portal user is a person who buys the products from the portal. 
+                        User also needs to register and login for purchases. 
+                        He can view the list of products, order details and he can also track his order. 
+                        If user is facing any problems he can give the feedback that feedback is seen by the both manager and the user.                    </p>
+                </div>
+            </div>
+        </a>
+
+        </div>
+
+            
+
+        <!-- image and paragraph-->
+        <div class="home_line">
+            <div ><img src="{% static 'images/home_img1.jpg' %}" class="home_img "></div>
+            <div class="home_par"><p>This project is designed for the communication between the admin and the client. 
+                In this, every detail of the product is displayed to the clients. 
+                Manufacturers design several products and upload them to the site. 
+                So, those clients can know about the type, price, number, quality, and quantity of products.<br>
+                In this project, there are 3 modules which include:-<br>
+                Admin side:-In this admin is the owner of the portal. 
+                He adds the manager  to the portal and maintains the portal. </p></div>
+        </div>
+        <div class="home_line">
+            <div class="home_par"><p>Client side:-In this every client should register /login into a site for further process. 
+                Clients can check the products and can book the products.<br>
+                Manager side:-  This  acts as a communication between both manufacturer and  the client. 
+                Even every manager should register /login into a site for further process.<br>
+                If a client books the product, it should also show the tracking address of the product to the client. 
+                If a client wants to book a product that is out of stock then, this information should reach the admin and also to the manager.<br>
+                The database is connected between the admin side, manager side and the client side where all the transactions are recorded in it.</p></div>
+            <div ><img src="{% static 'images/home_img2.jpg' %}" class="home_img"></div>
+        </div>
+    </main>
+        <!-- footer -->
+        <footer class="home_footer">
+            <div class="footer_container">
+                <div class="footer_row">
+                    <div class="footer_col">
+                        <h4>Company</h4>
+                        <ul class="footer_ul">
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Our Services</a></li>
+                            <li><a href="#">PrivacyPolicy</a></li>
+                            <li><a href="#">Affiliate Program</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer_col">
+                        <h4>Get Help</h4>
+                        <ul class="footer_ul">
+                            <li><a href="#">FAQ</a></li>
+                            <li><a href="#">Shipping</a></li>
+                            <li><a href="#">Returns</a></li>
+                            <li><a href="#">Order Status</a></li>
+                            <li><a href="#">Payment Options</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer_col">
+                        <h4>Online Shop</h4>
+                        <ul class="footer_ul">
+                            <li><a href="#">Watch</a></li>
+                            <li><a href="#">Bag</a></li>
+                            <li><a href="#">Shoes</a></li>
+                            <li><a href="#">Dress</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer_col">
+                        <h4>Follow Us</h4>
+                        <div class="footer_links">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </footer>
+        <!--java script-->
+        <script >
+            const toggleBtn = document.querySelector('.toggle_btn')
+            const toggleBtnIcon = document.querySelector('.toggle_btn span')
+            const dropDownMenu = document.querySelector('.dropdown_menu')
+
+            toggleBtn.onclick = function(){
+                dropDownMenu.classList.toggle('open')
+                const isOpen = document.classList.contains('open')
+            }       
+
+        </script>
+    </body>
+</html>

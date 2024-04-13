@@ -1,0 +1,163 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	
+	<title>INDUS SALE</title>
+    <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" href="{% static 'css/admin-css.css' %}">
+    <link rel="icon" href="{% static 'images/logo.jpg' %}" type="image/icon type">
+	<script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			$(".hamburger").click(function(){
+			   $(".wrapper").toggleClass("collapse");
+			});
+		});
+	</script>
+</head>
+<body>
+
+    <div class="wrapper">
+        <div class="top_navbar">
+            <div class="hamburger">
+                <div class="one"></div>
+                <div class="two"></div>
+                <div class="three"></div>
+            </div>
+        <div class="top_menu">
+            <div class="logo"><img src="{% static 'images/logo.jpg' %}" class="navlogo"><a href="#" class="nav_head">Indus Sale</a></div>
+                <ul>
+                    <li><a href="{% url 'feedbacks' %}">
+                        <i class="fas fa-comment" alt="feedback"></i></a></li>
+                
+                    <li><a href="{% url 'manager_profile' %}">
+                        <i class="fas fa-user" alt="profile"></i></a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div>
+            <div class="sidebar">
+                <ul>
+                <li><a href="{% url 'home' %}" >
+                    <span class="icon"><i class="fas fa-home"></i></span>
+                    <span class="title">logout</span></a></li>
+
+                <li><a href="{% url 'manager' %}" >
+                    <span class="icon"><i class="fas fa-user"></i></span>
+                    <span class="title">manager</span></a></li>
+        
+                <li><a href="{% url 'add_item' %}" class="active" >
+                    <span class="icon"><i class="fas fa-user-plus"></i></span>
+                    <span class="title">Add item</span></a></li>
+
+                <li><a href="{% url 'Item_List' %}" >
+                    <span class="icon"><i class="fas fa-book"></i></span>
+                    <span class="title">Item List</span></a></li>
+
+                <li><a href="{% url 'customer_list' %}">
+                    <span class="icon"><i class="fas fa-address-book"></i></span>
+                    <span class="title">Customer List</span></a></li>
+                <li><a href="{% url 'historys' %}">
+                    <span class="icon"><i class="fas fa-address-book"></i></span>
+                    <span class="title">History</span></a></li>
+                </ul>
+            </div>
+
+             <!-- heading of the page -->
+             <section id="home_heading">
+                <h1>Add item page</h1>
+                <p>This is the <br> page to add item by the manager</p>
+            </section>
+            
+            
+            <!--main page -->
+            <div class="add-manager-wrapper">
+                <div class="add-manager-title">
+                    Add Item 
+                </div>
+                
+                <div class="add-manager-form">
+                    <form action="../add_item/" method="POST">
+                        {% csrf_token %}
+                        <div class="input_field">
+                            <label>Item Name </label>
+                            <input type="text" class="input">
+                        </div>
+                        <div class="input_field">
+                            <label>Description</label>
+                            <textarea  class="textarea"></textarea>
+                        </div>
+                        <div class="input_field">
+                            <label>cost </label>
+                            <input type="text" class="input">
+                        </div>
+                        
+                        
+                       
+                        
+                        
+                        <button class="btn">Add Item</button>
+                        <p class="message"></p>
+                    </form>
+                </div>
+        
+            </div>
+
+            
+        </div>
+    </div>
+    
+
+</body>
+<!-- footer -->
+<footer class="home_footer">
+    <div class="footer_container">
+        <div class="footer_row">
+            <div class="footer_col">
+                <h4>Company</h4>
+                <ul class="footer_ul">
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Our Services</a></li>
+                    <li><a href="#">PrivacyPolicy</a></li>
+                    <li><a href="#">Affiliate Program</a></li>
+                </ul>
+            </div>
+            <div class="footer_col">
+                <h4>Get Help</h4>
+                <ul class="footer_ul">
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Shipping</a></li>
+                    <li><a href="#">Returns</a></li>
+                    <li><a href="#">Order Status</a></li>
+                    <li><a href="#">Payment Options</a></li>
+                </ul>
+            </div>
+            <div class="footer_col">
+                <h4>Online Shop</h4>
+                <ul class="footer_ul">
+                    <li><a href="#">Watch</a></li>
+                    <li><a href="#">Bag</a></li>
+                    <li><a href="#">Shoes</a></li>
+                    <li><a href="#">Dress</a></li>
+                </ul>
+            </div>
+            <div class="footer_col">
+                <h4>Follow Us</h4>
+                <div class="footer_links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</footer>
+</html>
+

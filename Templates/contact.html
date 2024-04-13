@@ -1,0 +1,180 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <title>INDUS SALE</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <link rel="icon" href="{% static 'IMAGES/logo.jpg'%}" type="image/icon type">
+        <meta name="viewport" content="widhth=device-width,initial-scale=1.0">
+        <link rel="stylesheet" href="{% static 'css/common_nav_footer_css.css'%}">
+        <link rel="stylesheet" href="{% static 'css/common_css.css'%}">
+        <link rel="stylesheet" href="JS/home_js.js" type="text/Javascript">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@10..48,600&family=Cookie&family=Handlee&family=Lobster+Two&family=Marck+Script&family=Oswald:wght@300&family=Playfair+Display&family=Tangerine&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="crossorigin="anonymous" referrerpolicy="no-referrer" />
+         
+    </head>
+    <style>
+        .home_body{
+            background-image: url(../static/images/home_bg.jpg);
+        }
+    </style>
+    
+    <body class="home_body">
+        <script src="js/script.js"></script>
+        <!-- Nav bar-->
+        <header class="nav_heading">
+            <div class="navbar">
+                <div class="logo"><img src="{% static 'images/logo.jpg'%}" class="navlogo"><a href="#" class="nav_head">Indus Sale</a></div>
+                <ul class="nav_links">
+                    <li class="nav_link"><a href="{% url 'home' %}" class="nav_link">Home</a></li>
+                    <li class="nav_link"><a href="{% url 'about' %}" class="nav_link">About</a></li>
+                    <li class="nav_link"><a href="{% url 'contact' %}" class="nav_link">Contact</a></li>
+                    <li class="nav_link"><a href="{% url 'module_admin' %}" class="nav_link">Admin</a></li>
+                    <li class="nav_link"><a href="{% url 'module_manager' %}" class="nav_link">Manager</a></li>
+                    <li class="nav_link"><a href="{% url 'module_user' %}" class="nav_link">User</a></li>
+                </ul>
+                <a href="{% url 'login' %}" class="home_signin">login</a>
+                <div class="toggle_btn">
+                    <span class="material-symbols-outlined">menu</span>
+                </div>
+            </div>
+            <div class="dropdown_menu ">
+                <li class="nav_link"><a href="{% url 'home' %}" class="nav_link">Home</a></li>
+                    <li class="nav_link"><a href="{% url 'about' %}" class="nav_link">About</a></li>
+                    <li class="nav_link"><a href="{% url 'contact' %}" class="nav_link">Contact</a></li>
+                    <li class="nav_link"><a href="{% url 'module_admin' %}" class="nav_link">Admin</a></li>
+                    <li class="nav_link"><a href="{% url 'module_manager' %}" class="nav_link">Manager</a></li>
+                    <li class="nav_link"><a href="{% url 'module_user' %}" class="nav_link">User</a></li>
+                <li><a href="{% url 'login' %}" class="home_signin nav_link">login</a></li>
+            </div>
+        </header>
+
+        <!-- heading of the page -->
+        <main>
+            <section id="home_heading">
+                <h1>Contact page {{result}}</h1>
+                <p>This is the <br>Contact page of the website</p>
+            </section>
+        </main>
+
+        <!--contact form-->
+        <section class="contact">
+            <div class="contact_content">
+                <h2>Contact Us</h2>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+                    Corporis cupiditate, magni nostrum est repellat deserunt eos ea nobis error qui, 
+                    quis aspernatur delectus. Velit, ad. Numquam fugit modi officia libero.
+                </p>
+            </div>
+            <div class="contact_container">
+                <div class="contact_info">
+                    <div class="contact_box">
+                        <div class="contact_icons"><i class="fa fa-map-marker" aria-hidden="true"></i></div>
+                        <div class="contact_text">
+                            <h3>Address</h3>
+                            <p>3-127/90/46,<br>Manikanta Nagar,<br>Boduppal,<br>Hyderabad-500092</p>
+                        </div>
+                    </div>
+                    <div class="contact_box">
+                        <div class="contact_icons"><i class="fa fa-phone" aria-hidden="true"></i></div>
+                        <div class="contact_text">
+                            <h3>Phone</h3>
+                            <p>+91-7702297163</p>
+                        </div>
+                    </div>
+                    <div class="contact_box">
+                        <div class="contact_icons"><i class="fa fa-envelope" aria-hidden="true"></i></div>
+                        <div class="contact_text">
+                            <h3>Email</h3>
+                            <p>shivanivemula17@gmail.com</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contactform">
+                    <form action="../contact/" method="POST">
+                        {% csrf_token %}
+                        <h2>Send Message</h2>
+                        <label class="contact_inputbox">Full Name</label>
+                        <input type="text" name="Name" required="required" class=" contact_input"><br>
+                        
+                        <label class="contact_inputbox">Email</label>
+                        <input type="email" name="email" required="required" class=" contact_input"><br>
+        
+                        <label class="contact_inputbox">Type Your Message</label>
+                        <input type="textarea" name="textarea" required="required" class=" contact_input"><br>
+                       
+                        <button type="submit" name="submit" value="Send" class=" contact_button">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+        <!--map -->
+        <div class="contact_map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1262.5153381878768!2d78.52876498989853!3d17.393274415708095!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb990504a28b7d%3A0x2bfa2aa2c717879f!2sAurora&#39;s%20PG%20College!5e0!3m2!1sen!2sin!4v1693113774619!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+
+        <!-- footer -->
+        <footer class="home_footer">
+            <div class="footer_container">
+                <div class="footer_row">
+                    <div class="footer_col">
+                        <h4>Company</h4>
+                        <ul class="footer_ul">
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Our Services</a></li>
+                            <li><a href="#">PrivacyPolicy</a></li>
+                            <li><a href="#">Affiliate Program</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer_col">
+                        <h4>Get Help</h4>
+                        <ul class="footer_ul">
+                            <li><a href="#">FAQ</a></li>
+                            <li><a href="#">Shipping</a></li>
+                            <li><a href="#">Returns</a></li>
+                            <li><a href="#">Order Status</a></li>
+                            <li><a href="#">Payment Options</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer_col">
+                        <h4>Online Shop</h4>
+                        <ul class="footer_ul">
+                            <li><a href="#">Watch</a></li>
+                            <li><a href="#">Bag</a></li>
+                            <li><a href="#">Shoes</a></li>
+                            <li><a href="#">Dress</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer_col">
+                        <h4>Follow Us</h4>
+                        <div class="footer_links">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </footer>
+        
+        <!--java script-->
+        <script >
+            const toggleBtn = document.querySelector('.toggle_btn')
+            const toggleBtnIcon = document.querySelector('.toggle_btn span')
+            const dropDownMenu = document.querySelector('.dropdown_menu')
+
+            toggleBtn.onclick = function(){
+                dropDownMenu.classList.toggle('open')
+                const isOpen = document.classList.contains('open')
+            }       
+
+        </script>
+    </body>
+</html>

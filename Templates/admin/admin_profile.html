@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>INDUS SALE</title>
+	<link rel="stylesheet" href="../css/admin-css.css">
+    <link rel="icon" href="../images/logo.jpg" type="image/icon type">
+	<script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			$(".hamburger").click(function(){
+			   $(".wrapper").toggleClass("collapse");
+			});
+		});
+	</script>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
+  
+    <!-- Font Awesome if you need it
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
+    -->
+    <link rel="stylesheet" href="https://unpkg.com/tailwindcss@2.2.19/dist/tailwind.min.css"/> 
+    <!--Replace with your tailwind.css once created-->
+</head>
+<body>
+
+    <div class="wrapper">
+        <div class="top_navbar">
+            <div class="hamburger">
+                <div class="one"></div>
+                <div class="two"></div>
+                <div class="three"></div>
+            </div>
+        <div class="top_menu">
+            <div class="logo"><img src="../images/logo.jpg" class="navlogo"><a href="#" class="nav_head">Indus Sale</a></div>
+                <ul>
+                    <li><a href="feedback.html">
+                        <i class="fas fa-comment" alt="feedback"></i></a></li>
+                    
+                    <li><a href="admin_profile.html">
+                        <i class="fas fa-user" alt="profile"></i></a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div>
+            <div class="sidebar">
+                <ul>
+                <li><a href="../home.html" >
+                    <span class="icon"><i class="fas fa-home"></i></span>
+                    <span class="title">Home</span></a></li>
+
+                <li><a href="admin.html" >
+                    <span class="icon"><i class="fas fa-user"></i></span>
+                    <span class="title">admin</span></a></li>
+        
+                <li><a href="add_manager.html" >
+                    <span class="icon"><i class="fas fa-user-plus"></i></span>
+                    <span class="title">Add Manager</span></a></li>
+
+                <li><a href="item_list.html" >
+                    <span class="icon"><i class="fas fa-book"></i></span>
+                    <span class="title">Item List</span></a></li>
+
+                <li><a href="customer_list.html">
+                    <span class="icon"><i class="fas fa-address-book"></i></span>
+                    <span class="title">Customer List</span></a></li>
+
+                <li><a href="manager_list.html">
+                    <span class="icon"><i class="fas fa-address-book"></i></span>
+                    <span class="title">Manager List</span></a></li>
+                </ul>
+            </div>  
+        </div>
+    </div>
+    <!-- heading of the page -->
+    <section id="home_heading">
+        <h1>Admin Profile page</h1>
+        <p>This is the <br>profile page of the Admin</p>
+    </section>
+    
+
+    <!--main page-->
+    <div class="profile-container">
+        <div class="profile-box">
+            <i class="fa fa-bars menu-icon" aria-hidden="true"></i> 
+            <i class="fa fa-cog setting-icon" aria-hidden="true"></i>
+            <img src="../images/admin-profile.jpg" class="profile-pic">
+            <h1>Vemula Shivani</h1>
+            <p>Student at Aurora pg college</p>
+            <div class="social-media">
+               <img src="../images/facebook.png " class="social-icon">
+               <img src="../images/instagram.png" class="social-icon">
+               <img src="../images/twitter.png" class="social-icon">
+            </div>
+            <button type="button">Follow</button>
+            <div class="profile-bottom">
+                <p>learn more about my profile</p>
+                <i class="fa fa-arrow-down" aria-hidden="true"></i>
+            </div>
+        </div>
+    </div>
+
+	<script src="https://unpkg.com/popper.js@1/dist/umd/popper.min.js"></script>
+	<script src="https://unpkg.com/tippy.js@4"></script>
+	
+</body>
+<!-- footer -->
+<footer class="home_footer">
+    <div class="footer_container">
+        <div class="footer_row">
+            <div class="footer_col">
+                <h4>Company</h4>
+                <ul class="footer_ul">
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Our Services</a></li>
+                    <li><a href="#">PrivacyPolicy</a></li>
+                    <li><a href="#">Affiliate Program</a></li>
+                </ul>
+            </div>
+            <div class="footer_col">
+                <h4>Get Help</h4>
+                <ul class="footer_ul">
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Shipping</a></li>
+                    <li><a href="#">Returns</a></li>
+                    <li><a href="#">Order Status</a></li>
+                    <li><a href="#">Payment Options</a></li>
+                </ul>
+            </div>
+            <div class="footer_col">
+                <h4>Online Shop</h4>
+                <ul class="footer_ul">
+                    <li><a href="#">Watch</a></li>
+                    <li><a href="#">Bag</a></li>
+                    <li><a href="#">Shoes</a></li>
+                    <li><a href="#">Dress</a></li>
+                </ul>
+            </div>
+            <div class="footer_col">
+                <h4>Follow Us</h4>
+                <div class="footer_links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</footer>
+</html>
