@@ -1,0 +1,236 @@
+/*feedback*/
+.feed-container{
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 400px;
+    background-color: #111;
+    padding:20px 30px;
+    margin-left: 500px;
+    border: 1px solid #444;
+    display: flex;
+}
+.feed-container .post{
+    display: none;
+}
+.feed-container .text{
+    font-size: 25px;
+    color: #666;
+    font-weight: 500;
+}
+.feed-container .edit{
+    position: absolute;
+    right: 10px;
+    top: 5px;
+    font-size: 16px;
+    color: #666;
+    font-weight: 500;
+}
+.feed-container .edit:hover{
+    text-decoration: underline;
+}
+.star-widget input{
+    display: none;
+}
+.star-widget label{
+    font-size: 40px;
+    color: #444;
+    padding: 10px;
+    float: right;
+    transition: all 0.2s ease;
+}
+.star-widget input:not(:checked) ~ label:hover{
+    color: #fd4;
+}
+.star-widget input:not(:checked) ~ label:hover ~ label{
+    color: #fd4;
+}
+.star-widget input#rate-5:checked ~ label{
+    color: #fe7;
+    text-shadow: 0 0 20px #952;
+}
+#rate-1:checked ~ form header:before{
+    content: "i just hate it 😠	";
+}
+#rate-2:checked ~ form header:before{
+    content: "i don't like it 😔";
+}
+#rate-3:checked ~ form header:before{
+    content: " i just like it 🙂";
+}
+#rate-4:checked ~ form header:before{
+    content: "it is awesome 😛";
+}
+#rate-5:checked ~ form header:before{
+    content: "i just love it 😍";
+}
+.feed-container form{
+    display: none;
+}
+input:checked ~ form{
+    display: block;
+}
+form header{
+    width: 100%;
+    font-size: 25px;
+    color: #fe7;
+    font-weight: 500;
+    margin: 5px 0 20px 0;
+    text-align: center;
+    transition: all 0.2s ease;
+}
+form textarea{
+    height: 100px;
+    width: 100%;
+    overflow: hidden;
+}
+form textarea .textareas{
+    height: 100%;
+    width: 100%;
+    outline: none;
+    color: #eee;
+    border: 1px solid #333;
+    background: #222;
+    padding: 10px;
+    font-size: 17px;
+    resize: none;
+} 
+form .btns{
+    height: 45px;
+    width: 100%;
+    margin: 15px 0;
+}
+form .btns button{
+    height: 100%;
+    width: 100%;
+    border: 1px solid #444;
+    outline: none;
+    background: #222;
+    color: #999;
+    font-size: 17px;
+    font-weight: 500;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+form .btns button:hover{
+    background: #1b1b1b;
+}
+
+/*history*/
+
+.timeline {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+  }
+  
+  .timeline::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 6px;
+    background: #fff;
+    left: 50%;
+    margin-left: -3px;
+  }
+  
+  .timecontainer {
+    padding: 10px 40px;
+    position: relative;
+    width: 50%;
+  }
+  
+  .timecontainer::after {
+    content: '';
+    position: absolute;
+    top: 15px;
+    right: -17px;
+    width: 25px;
+    height: 25px;
+    background: #fff;
+    border-radius: 50%;
+    border: 4px solid #ff9f55;
+  }
+  
+  .timeleft {
+    left: 0;
+  }
+  
+  .timeright {
+    left: 50%;
+  }
+  
+  .timeright::after {
+    left: -16px;
+  }
+  
+  .timeleft::before {
+    content: '';
+    height: 0px;
+    width: 0px;
+    position: absolute;
+    top: 22px;
+    right: 30px;
+    border: 10px solid #fff;
+    border-width: 10px 0 10px 10px;
+    border-color: transparent transparent transparent #fff;
+  }
+  
+  .timeright::before {
+    content: '';
+    height: 0px;
+    width: 0px;
+    position: absolute;
+    top: 22px;
+    left: 30px;
+    border: 10px solid #fff;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent #fff transparent transparent;
+  }
+  
+  .timecontent {
+    padding: 20px 30px;
+    background: #fff;
+    border-radius: 6px;
+  }
+
+/*responsive page*/
+
+@media (max-width:1000px){
+    .feed-container{
+        margin-left: 300px;
+    }
+  }
+@media (max-width:750px){
+    .feed-container{
+        margin-left: 70px;
+    }
+  }
+@media screen and (max-width: 600px) {
+    .timeline::after {
+      left: 31px;
+    }
+  
+    .timecontainer {
+      width: 100%;
+      padding-left: 70px;
+      padding-right: 25px;
+    }
+  
+    .timecontainer::before {
+      left: 60px;
+      border-width: 10px 10px 10px 0;
+      border-color: transparent #fff transparent transparent;
+    }
+  
+    .timeleft::after, .timeright::after {
+      left: 15px;
+      z-index: 1;
+    }
+  
+    .timeright {
+      left: 0;
+    }
+  }

@@ -1,0 +1,267 @@
+@font-face {
+
+    font-family: pop;
+
+    src: url(./Fonts/Poppins-Medium.ttf);
+
+}
+.trackingmain{
+
+    width: 100%;
+
+    height: 100vh;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    font-family: pop;
+
+    flex-direction: column;
+
+}
+
+.trackinghead{
+
+    text-align: center;
+
+}
+
+.head_1{
+
+    font-size: 30px;
+
+    font-weight: 600;
+
+    color: #333;
+
+}
+
+.head_1 span{
+
+    color: #ff4732;
+
+}
+
+.head_2{
+
+    font-size: 16px;
+
+    font-weight: 600;
+
+    color: #333;
+
+    margin-top: 3px;
+
+}
+
+.ultracking{
+
+    display: flex;
+
+    margin-top: 80px;
+
+}
+
+.ultracking .litracking{
+
+    list-style: none;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+}
+
+.ultracking .litracking .icon{
+
+    font-size: 35px;
+
+    color: #ff4732;
+
+    margin: 0 60px;
+
+}
+
+.trackingtext{
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    color: #ff4732;
+
+}
+
+
+/* Progress Div Css  */
+
+
+.ultracking .litracking .progress{
+
+    width: 30px;
+
+    height: 30px;
+
+    border-radius: 50%;
+
+    background-color: rgba(68, 68, 68, 0.781);
+
+    margin: 14px 0;
+
+    display: grid;
+
+    place-items: center;
+
+    color: #fff;
+
+    position: relative;
+
+    cursor: pointer;
+
+}
+
+.progress::after{
+
+    content: " ";
+
+    position: absolute;
+
+    width: 125px;
+
+    height: 5px;
+
+    background-color: rgba(68, 68, 68, 0.781);
+
+    right: 30px;
+
+}
+
+.one::after{
+
+    width: 0;
+
+    height: 0;
+
+}
+
+.ultracking .litracking .progress .uil{
+
+    display: none;
+
+}
+
+.ultracking .litracking .progress p{
+
+    font-size: 13px;
+
+}
+
+
+/* Active Css  */
+
+
+.ultracking .litracking .active{
+
+    background-color: #ff4732;
+
+    display: grid;
+
+    place-items: center;
+
+}
+
+.litracking .active::after{
+
+    background-color: #ff4732;
+
+}
+
+.ultracking .litracking .active p{
+
+    display: none;
+
+}
+
+.ultracking .litracking .active .uil{
+
+    font-size: 20px;
+
+    display: flex;
+
+}
+
+
+/* Responsive Css  */
+
+
+@media (max-width: 980px) {
+
+    .ultracking{
+
+        flex-direction: column;
+
+    }
+
+    .ultracking .litracking{
+
+        flex-direction: row;
+
+    }
+
+    .ultracking .litracking .progress{
+
+        margin: 0 30px;
+
+    }
+
+    .progress::after{
+
+        width: 5px;
+
+        height: 55px;
+
+        bottom: 30px;
+
+        left: 50%;
+
+        transform: translateX(-50%);
+
+        z-index: -1;
+
+    }
+
+    .one::after{
+
+        height: 0;
+
+    }
+
+    .ultracking .litracking .icon{
+
+        margin: 15px 0;
+
+    }
+
+}
+
+
+@media (max-width:600px) {
+
+    .trackinghead .head_1{
+
+        font-size: 24px;
+
+    }
+
+    .trackinghead .head_2{
+
+        font-size: 16px;
+
+    }
+
+}
