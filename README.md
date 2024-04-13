@@ -1,7 +1,7 @@
 # shopping-website
 
 Overview
-Welcome to the Shopping Website repository! This project contains a comprehensive HTML shopping website template designed to provide users with a seamless and enjoyable online shopping experience. The website is built using HTML, CSS, JavaScript, python, postgre sql and django, offering a user-friendly interface for browsing products, making purchases, and managing orders.
+Welcome to the Shopping Website repository! This project contains a comprehensive HTML shopping website template designed to provide users with a seamless and enjoyable online shopping experience. The website is built using HTML, CSS, JavaScript, python, mySql and django, offering a user-friendly interface for browsing products, making purchases, and managing orders.
 
 Features
 Product Catalog: The shopping website features a diverse product catalog with categories, descriptions, and images to help users discover and explore items of interest.
