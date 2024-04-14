@@ -23,3 +23,7 @@ Populate the product catalog with your products, including descriptions, images,
 Test the shopping website thoroughly to ensure functionality, usability, and compatibility across different browsers and devices.
 Deploy the shopping website to a web server or hosting platform to make it accessible to users.
 Monitor website analytics, user feedback, and sales data to optimize performance and user experience over time.
+
+<img src="Static/images/screenshot1.jpg">
+<img src="Static/images/screenshot2.jpg">
+<img src="Static/images/screenshot3.jpg">
